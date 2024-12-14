@@ -117,16 +117,13 @@ Verify the image exists on the container registry.
 
 Debugging ImagePullBackOff
 To debug the ImagePullBackOff issue:
-
 Check Pod Events:
-
 bash
 Copy code
 kubectl describe pod <pod-name>
 Look for events under "Events" that indicate why the image pull failed.
 
 Check Node Logs:
-
 Verify kubelet logs for errors:
 bash
 Copy code
@@ -140,7 +137,6 @@ docker pull <image>
 
 
 Summary of Solutions
-Scenario	                 Solution
 Incorrect image name/tag	 Verify and fix the image name or tag.
 Authentication failure	   Use imagePullSecrets with valid credentials.
 Network issues	           Fix DNS, firewall, or proxy issues.
